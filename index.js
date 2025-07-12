@@ -3,7 +3,11 @@ const cors = require('cors');
 const nodemailer = require('nodemailer');
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: 'https://evolution-git-main-aeroedgetechnologies-projects.vercel.app',
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  credentials: true
+}));
 app.use(express.json());
 
 app.post('/api/contact', async (req, res) => {
