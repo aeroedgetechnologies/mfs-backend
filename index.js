@@ -41,6 +41,9 @@ app.post('/api/contact', async (req, res) => {
     res.status(500).json({ error: 'Failed to send message' });
   }
 });
+app.get('/', (req, res) => {
+  res.json({ message: 'Server is running!' });
+});
 
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
