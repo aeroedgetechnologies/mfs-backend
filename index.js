@@ -4,7 +4,8 @@ const nodemailer = require('nodemailer');
 
 const app = express();
 app.use(cors({
-  origin: 'https://evolution-git-main-aeroedgetechnologies-projects.vercel.app',
+  // origin: 'https://evolution-git-main-aeroedgetechnologies-projects.vercel.app',
+    origin: '*',
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   credentials: true
 }));
